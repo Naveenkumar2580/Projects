@@ -1,0 +1,84 @@
+/* 
+=========================================
+         Register Page Styles
+=========================================
+*/  
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+};
+body{
+    background: linear-gradient(90deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb);
+    font-family:'poppins','sans-serif';
+}
+#form{
+    width: 400px;
+    margin: 15vh auto 0 auto;
+    background-color:aqua;
+    border-radius: 5px;
+    padding: 30px;
+}
+h1{
+    text-align:center;
+    color: blueviolet;
+    font: size 50px;
+}
+#form button{
+    width: 100%;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 3px;
+    margin:20px 0;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.input-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.input-group input{
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top:5px;
+    padding: 10px;
+    border: 1px solid blueviolet;
+}
+.input-group input:focus{
+    outline: 0;
+}
+.input-group .error{
+    color: rgb(194, 54, 54);
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.input-group.success{
+    border-color: green;
+}
+.input-group.error{
+    border-color: red;
+}
+@media (max-width: 480px){
+       #form{
+        width: 300px;
+        margin:10vh auto 0 auto;
+        padding: 20px;
+       }  
+       h1{
+        font-size: 30px;
+       } 
+       #form button{
+        width: 70%;
+        margin:0 40px;
+       }
+       .input-group{
+        margin-bottom: 10px;
+       }
+}
+
+/* Thank you for taking the time to review my code! */
