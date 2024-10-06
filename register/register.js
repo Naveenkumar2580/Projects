@@ -1,8 +1,3 @@
-/* 
-=========================================
-         Register page functions(js)
-=========================================
-*/ 
 const form=document.querySelector('#form');
 const username=document.querySelector('#username');
 const email=document.querySelector('#email');
@@ -87,5 +82,3 @@ const validateEmail = (email) => {
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return emailPattern.test(email);
 };
-
-/* Thank you for taking the time to review my code! */
