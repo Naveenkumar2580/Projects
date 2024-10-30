@@ -446,6 +446,9 @@ nav .fas{
         font-size: 16px;
         margin-right: 20px;
     }
+    .contact-right{
+        flex-basis: 100%;
+    }   
     .contact-left {
         flex-basis: 100%;
         text-align: left;
@@ -460,6 +463,9 @@ nav .fas{
     .contact-item p {
         margin: 0;
         white-space: nowrap;
+    }
+    .contact-left h1 {
+        margin-bottom: 20px;
     }
     .copyright{
         font-size: 14px;
