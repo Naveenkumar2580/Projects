@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Map - AQI</title>
+    <link rel="stylesheet" href="map.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    <main id="main">
+        <h1>Air Quality Index of India</h1>
+        <div align="center">
+            <div id="visualization"></div>
+        </div>
+        <script>
+            google.charts.load('current', {'packages':['geochart']});
+            google.charts.setOnLoadCallback(drawVisualization);
+            
+            function drawVisualization() {
+                var data = google.visualization.arrayToDataTable([
+                    ['State Code', 'State', 'AQI PM2.5'],
+                    ['IN-UP', "Uttar Pradesh", 789],
+                    ['IN-MH', "Maharashtra", 920],
+                    ['IN-BR', "Bihar", 510],
+                    ['IN-WB', "West Bengal", 620],
+                    ['IN-MP', "Madhya Pradesh", 700],
+                    ['IN-TN', "Tamil Nadu", 930],
+                    ['IN-RJ', "Rajasthan", 1030],
+                    ['IN-KA', "Karnataka", 1290],
+                    ['IN-GJ', "Gujarat", 1304],
+                    ['IN-AP', "Andhra Pradesh", 320],
+                    ['IN-OR', "Odisha", 133],
+                    ['IN-TG', "Telangana", 223],
+                    ['IN-KL', "Kerala", 311],
+                    ['IN-JH', "Jharkhand", 290],
+                    ['IN-AS', "Assam", 280],
+                    ['IN-PB', "Punjab", 300],
+                    ['IN-CG', "Chhattisgarh", 330],
+                    ['IN-HR', "Haryana", 300],
+                    ['IN-JK', "Jammu and Kashmir", 200],
+                    ['IN-UK', "Uttarakhand", 208],
+                    ['IN-HP', "Himachal Pradesh", 107],
+                    ['IN-TR', "Tripura", 301],
+                    ['IN-ML', "Meghalaya", 210],
+                    ['IN-MN', "Manipur", 220],
+                    ['IN-NL', "Nagaland", 201],
+                    ['IN-GA', "Goa", 1121],
+                    ['IN-AR', "Arunachal Pradesh", 343],
+                    ['IN-MZ', "Mizoram", 423],
+                    ['IN-SK', "Sikkim", 724],
+                    ['IN-DL', "Delhi", 231],
+                    ['IN-PY', "Puducherry", 233],
+                    ['IN-CH', "Chandigarh", 230],
+                    ['IN-AN', "Andaman and Nicobar Islands", 230],
+                    ['IN-DN', "Dadra and Nagar Haveli", 230],
+                    ['IN-DD', "Daman and Diu", 229],
+                    ['IN-LD', "Lakshadweep", 231]
+                ]);
+
+                var opts = {
+                    region: 'IN',
+                    displayMode: 'regions',
+                    colorAxis: {
+                        colors: ['#008000', '#FFFF00', '#FF0000'],
+                        minValue: 0,
+                        maxValue: 1500
+                    },
+                    resolution: 'provinces',
+                    backgroundColor: '#81d4fa',
+                    defaultColor: '#f5f5f5'
+                };
+
+                var geochart = new google.visualization.GeoChart(
+                    document.getElementById('visualization')
+                );
+                geochart.draw(data, opts);
+            }
+        </script>
+    </main>
+</body>
+</html>
