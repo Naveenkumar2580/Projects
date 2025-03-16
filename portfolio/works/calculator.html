@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="https://kit.fontawesome.com/YOUR-FONT-AWESOME-KIT.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #ecf0f3;
+            font-family: sans-serif;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 20px 5px 20px;
+            font-size: 50px;
+        }
+        h5 {
+            text-align: center;
+            margin-left: 100px;
+        }
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .calculator {
+            background-color: red;
+            padding: 15px;
+            border-radius: 30px;
+            box-shadow: inset 5px 5px 12px #ffffff, 5px 5px 12px rgba(0, 0, 0, .16);
+            display: grid;
+            grid-template-columns: repeat(4, 68px);
+        }
+        input {
+            grid-column: span 4;
+            height: 70px;
+            width: 260px;
+            background-color: #ecf0f3;
+            box-shadow: inset -5px -5px 12px #ffffff, inset 5px 5px 12px rgba(0, 0, 0, .16);
+            border: none;
+            outline: none;
+            color: rgb(70, 70, 70);
+            font-size: 50px;
+            text-align: end;
+            margin: auto;
+            margin-top: 40px;
+            margin-bottom: 30px;
+            padding: 20px;
+        }
+        button {
+            height: 48px;
+            width: 48px;
+            background-color: #cdd0d1;
+            box-shadow: inset -5px -5px 12px #ecf0f3, inset 5px 5px 12px rgba(0, 0, 0, .16);
+            border: none;
+            border-radius: 20%;
+            margin: 8px;
+            font-size: 16px;
+        }
+        .equal {
+            width: 115px;
+            border-radius: 40px;
+            background-color: #ecf0f3;
+            box-shadow: inset -5px -5px 12px #ecf0f3, inset 5px 5px 12px rgba(0, 0, 0, .16);
+            border: none;
+        }
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 36px;
+                margin: 10px;
+            }
+            input {
+                width: 100%;
+                font-size: 30px;
+                height: 60px;
+                padding: 15px;
+            }
+            .calculator {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 6px;
+            }
+            button {
+                height: 40px;
+                width: 40px;
+                font-size: 14px;
+            }
+            .equal {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <h5>Made by Naveen</h5>
+    <div class="container">
+        <div class="calculator">
+            <input type="text" placeholder="0" id="output-screen">
+            <button onclick="Clear()">Clc</button>
+            <button onclick="del()">Del</button>
+            <button onclick="display('%')">%</button>
+            <button onclick="display('/')">/</button>
+            <button onclick="display('7')">7</button>
+            <button onclick="display('8')">8</button>
+            <button onclick="display('9')">9</button>
+            <button onclick="display('*')">*</button>
+            <button onclick="display('4')">4</button>
+            <button onclick="display('5')">5</button>
+            <button onclick="display('6')">6</button>
+            <button onclick="display('-')">-</button>
+            <button onclick="display('1')">1</button>
+            <button onclick="display('2')">2</button>
+            <button onclick="display('3')">3</button>
+            <button onclick="display('+')">+</button>
+            <button onclick="display('.')">.</button>
+            <button onclick="display('0')">0</button>
+            <button onclick="calculate()" class="equal">=</button>
+        </div>
+    </div>
+
+    <script>
+        let outputScreen = document.getElementById("output-screen");
+
+        function display(num) {
+            outputScreen.value += num;
+        }
+
+        function calculate() {
+            try {
+                outputScreen.value = eval(outputScreen.value);
+            } catch (err) {
+                alert("Invalid");
+            }
+        }
+
+        function Clear() {
+            outputScreen.value = "";
+        }
+
+        function del() {
+            outputScreen.value = outputScreen.value.slice(0, -1);
+        }
+    </script>
+</body>
+</html>
