@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Current Journey</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #fce4ec);
+      margin: 0;
+      padding: 0;
+      color: #1a202c;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 60px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    h1 {
+      color: #0d47a1;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .highlight {
+      color: #e91e63;
+      font-weight: bold;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      background-color: #0d47a1;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .button:hover {
+      background-color: #1565c0;
+      transform: translateY(-2px);
+    }
+
+    .date {
+      margin-top: 20px;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .skills-section {
+      margin-top: 40px;
+    }
+
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .circle {
+      width: 120px;
+      height: 120px;
+      position: relative;
+      background: conic-gradient(#0d47a1 0deg, #0d47a1 var(--percent), #e0e0e0 var(--percent));
+      border-radius: 50%;
+    }
+
+    .circle-inner {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #0d47a1;
+    }
+
+    .skill-label {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 20px;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .button {
+        width: 100%;
+        padding: 14px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>My Current Work & Learning</h1>
+    <p id="learning-description"></p>
+    <div id="platform-buttons"></div>
+    <div class="date" id="start-date"></div>
+
+    <div class="skills-section">
+      <h2>Skill Progress</h2>
+      <div class="skills-grid" id="skills-container"></div>
+    </div>
+  </div>
+
+  <script>
+    // ✅ UPDATE SECTION
+    const learningFocus = ["Java", "OOPs Concepts", "Spring Boot", "DSA"];
+    const platforms = [
+      { name: "CodeChef", url: "https://www.codechef.com/users/nvn_yx" },
+      { name: "GitHub", url: "https://github.com/Naveenkumar2580" },
+      { name: "LeetCode", url: "https://leetcode.com/u/lcqiUsDBC7/" }
+    ];
+    const startDate = "20 July 2025";
+
+    const skills = [
+      { name: "Java", percent: 80 },
+      { name: "HTML", percent: 70 },
+      { name: "CSS", percent: 75 },
+      { name: "JavaScript", percent: 76 }
+    ];
+
+    // Inject learning description
+    const descriptionEl = document.getElementById("learning-description");
+    descriptionEl.innerHTML = `I’m currently <span class="highlight">building and learning</span> ` +
+      learningFocus.map(skill => `<span class="highlight">${skill}</span>`).join(", ") + ".";
+
+    // Inject platform buttons
+    const buttonsContainer = document.getElementById("platform-buttons");
+    platforms.forEach(platform => {
+      const a = document.createElement("a");
+      a.className = "button";
+      a.href = platform.url;
+      a.textContent = `Visit ${platform.name}`;
+      a.target = "_blank";
+      buttonsContainer.appendChild(a);
+    });
+
+    // Inject date
+    document.getElementById("start-date").textContent = `Started on: ${startDate}`;
+
+    // Inject skill circles
+    const skillsContainer = document.getElementById("skills-container");
+    skills.forEach(skill => {
+      const wrapper = document.createElement("div");
+      wrapper.innerHTML = `
+        <div class="circle" style="--percent: ${skill.percent * 3.6}deg;">
+          <div class="circle-inner">${skill.percent}%</div>
+        </div>
+        <div class="skill-label">${skill.name}</div>
+      `;
+      skillsContainer.appendChild(wrapper);
+    });
+  </script>
+</body>
+</html>

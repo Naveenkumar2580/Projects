@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website - Easy Tutorials</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/996f103dd0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div class="logo"><h1>Welcome!</h1></div>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#startup">My Startup</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()" id="openmenu"></i>
+            </nav>
+            <div class="header-content-wrapper"> <div class="header-text">
+                    <p>Java & Full-Stack Developer</p>
+                    <h1>Hi,I'm <span>Naveen Kumar</span><br>From Chennai</h1>
+                </div>
+
+            <div class="recent-main-page-works">
+                <h2>See My Recent Works (Daily Updates)</h2>
+                <p>Here's what I've been working on recently:</p>
+                <ul>
+                    <li><strong>July 20, 2025</strong>: Refined the UI for the new 'Task Manager' feature in my startup project.</li>
+                </ul>
+                <div class="recent-works-buttons">
+                    <a href="works/current-journey.html" class="btn btn-small">See My Current Working</a>
+                    <a href="#startup" class="btn btn-small">Startup Company Preview</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/naveen.png" loading="lazy">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>A passionate software developer specializing in Java and frontend development. Experienced in OOP, HTML, CSS, and JavaScript, with a focus on building efficient applications. Currently pursuing an engineering degree and eager to create impactful software solutions.
+                </p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Full Stack Development</span><br>Building complete web applications using frontend and backend technologies</li>
+                        <li><span>Java Development</span><br>Building software applications using Java and OOP principles</li>
+                        <li><span>Frontend Development</span><br>Developing web applications with HTML, CSS, and JavaScript</li>
+                        <li><span>Version Control</span><br>Working with Git and GitHub for code management</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2025 - Present</span><br>Developing Java applications with a focus on OOP and Spring Boot.</li>
+                        <li><span>2025</span><br>Completed Java Internship at <strong>ValueOfCodes</strong>.</li>
+                        <li><span>2025</span><br>Built a <strong>Library System GUI</strong> using Java and OOP principles.</li>
+                        <li><span>2025</span><br>Created a <strong>Full Stack Business Website</strong> for offering portfolio and website services.</li>
+                        <li><span>2025</span><br>Built a <strong>Bus Reservation System</strong> in Java to practice OOP concepts.</li>
+                        <li><span>2023 - 2024</span><br>Created a small game with point generation using JavaScript.</li>
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2023 - 2027</span><br>Panimalar Engineering College – Bachelor of Engineering (Pre-Final Year)</li>
+                        <li><span>2023</span><br>12th Standard Passed</li>
+                        <li><span>2021</span><br>10th Standard Passed</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My services</h1>
+        <div class="services-list">
+            <div>
+              <i class="fa-solid fa-server"></i>
+              <h2>Java & Backend Development</h2>
+              <p>Providing efficient backend solutions using Java, focusing on OOP, data handling, and server-side logic.</p>
+              <span class="more-info" style="display: none;">Experienced in working with databases, APIs, and optimizing backend performance.</span>
+              <a href="#" onclick="toggleMoreInfo(this); return false;">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Creating visually appealing and user-friendly websites with a focus on responsive design. Striving to deliver seamless, engaging digital experiences across devices.</p>
+                <span class="more-info" style="display: none;">Professional web design for all your needs.</span>
+                <a href="#" onclick="toggleMoreInfo(this); return false;">Learn more</a>
+            </div>
+            <div>
+             <i class="fas fa-layer-group" style="font-size: 50px;"></i> <h2>Fullstack Development</h2>
+             <p>Building comprehensive web applications from front to back, covering both user interface and server-side logic. My skills bridge UI/UX with robust backend systems.</p>
+             <span class="more-info" style="display: none;">Proficient in developing interactive frontends and scalable backends, connecting all pieces for complete solutions.</span>
+             <a href="#" onclick="toggleMoreInfo(this); return false;">Learn more</a>
+           </div>
+        </div>
+    </div>
+</div>
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Works & Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work1.png" alt="Java Bus Reservation System Preview" loading="lazy">
+                <div class="layer">
+                    <h3>Java Bus Reservation System</h3>
+                    <p>A simple Java project demonstrating OOP principles, including encapsulation and inheritance, for managing bus seat bookings.</p>
+                    <a href="works/bus-reservation.html"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work2.jpg" alt="Calculator App Preview" loading="lazy">
+                <div class="layer">
+                    <h3>Calculator App</h3>
+                    <p>This calculator is integrated into my site, built using HTML, CSS, and basic JavaScript functionalities.</p>
+                    <a href="works/calculator.html"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work3.png" alt="BrickBreaker Game Preview" loading="lazy">
+                <div class="layer">
+                    <h3>Brick Breaker</h3>
+                    <p>This classic game lets you experience the fun of breaking bricks. I'll be providing the source code for those interested in learning or building on it. Stay tuned for the download link!</p>
+                    <a href="works/brick-breaker.html"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work4.png" alt="Java Calculator Console App Preview" loading="lazy">
+                <div class="layer">
+                    <h3>Java Calculator</h3>
+                    <p>This is a simple console-based calculator built in Java. It performs basic arithmetic operations and is a great starting point for beginners exploring Java logic and syntax.</p>
+                    <a href="works/javacalculator.html"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+              <img src="images/work5.png" alt="Java Contact Book Console App Preview" loading="lazy">
+              <div class="layer">
+                <h3>Java Contact Book</h3>
+                <p>This console-based contact book application is developed in Java. It allows users to add, search, update, and delete contacts efficiently, making it a great project for learning data structures and file handling.</p>
+                <a href="works/javacontactbook.html"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+
+            <div class="work">
+                <img src="images/work6.png" alt="New Work 1 Placeholder" loading="lazy">
+                <div class="layer">
+                    <h3>Java Expense Tracker</h3>
+                    <p>Track and manage your daily expenses with categorized entries and quick summaries.</p>
+                    <a href="works/expense-tracker.html"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work7.png" alt="Java ToDoListManager" loading="lazy">
+                <div class="layer">
+                    <h3>Java ToDoListManager</h3>
+                    <p>A simple Java-based task manager to add, update, and track your daily tasks efficiently.</p>
+                    <a href="works/todolist-manager.html"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work8.png" alt="Diwali Spark Animation" loading="lazy">
+                <div class="layer">
+                    <h3>Diwali Spark</h3>
+                    <p>Festive cracker animation built using HTML, CSS, and JavaScript to celebrate Diwali.</p>
+                    <a href="works/diwali-spark.html"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+              <img src="images/work9.png" alt="Register Form UI" loading="lazy">
+              <div class="layer">
+                <h3>Register Form</h3>
+                <p>Responsive registration form with modern UI, styled using HTML, CSS, and JavaScript for user input validation.</p>
+                <a href="works/registerform.html"><i class="fas fa-external-link-alt"></i></a>
+              </div>
+            </div>
+
+
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<div id="startup">
+  <div class="container">
+    <h1 class="sub-title">My Startup: In5niteYields</h1>
+    <div class="startup-content">
+      <p>Welcome to <strong>In5niteYields</strong>, a creative digital startup offering professional services in website development, portfolios, UI/UX design, branding, and custom software solutions.</p>
+      
+      <p>We’re passionate about turning ideas into scalable digital products. Whether you're a freelancer, student, or a growing business, In5niteYields is here to deliver clean, fast, and responsive solutions tailored to your needs.</p>
+      
+      <h3>Vision & Goals</h3>
+      <p>To become a trusted digital partner by delivering high-quality, aesthetic, and functional digital experiences using modern web technologies.</p>
+      
+      <h3>Current Focus</h3>
+      <p>Currently, we're focused on building responsive portfolio websites, small business landing pages, Firebase-based web apps, and automated tools using JavaScript, React, Firebase, and Tailwind CSS.</p>
+
+      <!-- See Business Site Button -->
+      <div style="margin-top: 30px;">
+        <a href="https://in5niteyields.vercel.app" target="_blank" class="btn see-site-btn">See Business Site</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <div class="contact-item">
+                <p><i class="fas fa-paper-plane"></i><span>naveenponnambalam2005@gmail.com</span></p>
+                </div>
+                <div class="contact-item">
+                <p><i class="fas fa-phone-square"></i><span>6383412733</span></p>
+                </div>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/nvn_yx/profilecard/?igsh=dWxzOXNpYmdyZTY5" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+            
+              <a href="https://wa.me/916383412733" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            
+              <a href="https://github.com/Naveenkumar2580" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+            
+              <a href="https://leetcode.com/u/lcqiUsDBC7/" target="_blank">
+                <i class="fas fa-code"></i>
+              </a>
+            
+              <a href="https://www.linkedin.com/in/naveenkumar2005?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+
+                <a href="#" class="btn btn2" onclick="downloadCV(event)">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="your name" required>
+                    <input type="email" name="Email" placeholder="your email" required>
+                    <textarea name="Message" rows="6" placeholder="your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                   <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Naveen. Made with <i class="fas fa-heart"></i> by NavNet</p>
+    </div>
+</div>
+
+
+
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+}
+</script>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    var openMenuIcon = document.getElementById("openmenu");
+
+    function openmenu() {
+        sidemenu.style.right = "0";
+        openMenuIcon.style.display = "none";
+    }
+
+    function closemenu() {
+        sidemenu.style.right = "-250px";
+        openMenuIcon.style.display = "block";
+    }
+
+</script>
+<script>
+    const scriptURL = "[https://script.google.com/macros/s/AKfycbxo-4RkHt4HHWHm49oCPAHReGotVUhIOwP5cdC5w9j_I363nzCEzfCBh775ISp7ASREXg/exec](https://script.google.com/macros/s/AKfycbxo-4RkHt4HHWHm49oCPAHReGotVUhIOwP5cdC5w9j_I363nzCEzfCBh775ISp7ASREXg/exec)"
+    const form = document.forms['submit-to-google-sheet']
+    const msg=document.getElementById('msg');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML =""
+            },5000)
+        })
+        form.reset()
+        .catch(error => console.error('Error!', error.message))
+    })
+
+    function toggleMoreInfo(link) {
+    const moreInfo = link.previousElementSibling; // Targets the .more-info span
+    if (moreInfo.style.display === "none") {
+        moreInfo.style.display = "inline";
+        link.textContent = "Show less";
+    } else {
+        moreInfo.style.display = "none";
+        link.textContent = "Learn more";
+    }
+}
+
+ </script>
+
+
+    <script>
+        function downloadCV(event) {
+            event.preventDefault();
+            const link = document.createElement('a');
+            link.href = 'images/naveencv.png';
+            link.download = 'naveencv.jpg';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+
+
+</body>
+</html>
